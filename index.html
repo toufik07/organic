@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="description" content="this is a ecommerce website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .navigation{
+                display: flex;
+                list-style-type: none;
+                justify-content: space-between;
+                padding: 1%;
+            }
+            .nav1{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 50%;
+            }
+            .nav2{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 30%;
+            }
+            #logo{
+                width: 80%;
+            }
+            .nav2>li>a>img{
+                width: 3vw;
+            }
+            .banner>div{
+                width: 50%;
+                margin: 1%;
+            }
+            .banner>div>img{
+                width: 100%;
+            }
+            .banner{
+                margin: 2%;
+                padding: 2%;
+                display: flex;
+               
+            }
+            .banner>.content{
+                padding: 2%;
+                padding-top: 10%;
+                width: 40%;
+            }
+            .banner>div>h1{
+                font-size: 3em;
+            }
+            #btnshop{
+                    background-color: #5fa500;
+                    width: 30%;
+                    height: 10%;
+                    border-radius: 1em;
+                    color: white;
+                    font-weight: bold;
+                    border:0;
+                   
+                }
+
+            @media screen and (min-width :0px) and (max-width: 768px) {
+               .banner{
+                 flex-direction: column-reverse;
+                 text-align: center;
+                 padding: 1%;
+               }
+               .banner>div{
+                width: 90%;
+               }
+               .banner>.content{
+                width: 90%;
+                
+               }
+           }
+
+           @media (max-width:425px) {
+             #btnshop{
+                font-size: x-small;
+             }
+           }
+
+           @media (max-width:907px) {
+            .navigation{
+                flex-direction: column;
+                border:2px solid green;
+            }
+            .nav1{
+                width: 100%;
+                border-bottom: 2px solid green;
+                padding: 1%;
+            }
+            .nav2{
+                width: 100%;
+                padding: 1%;
+            }
+            .nav2>li>a>img{
+               width: 5vw;
+            }
+           }
+
+           
+           @media (max-width:500px){
+            .nav1{
+               flex-direction: column;
+            }
+            
+            
+           }
+        
+        </style>
+    </head>
+
+    <body>
+        <nav>
+          
+            <ul class="navigation">
+                <div class="nav1">
+                    <li><a href=""><img src="./img/nav.PNG" alt="" id="logo"></a></li>
+                    <li><a href="">Everything</a></li>
+                    <li><a href="">Groceries</a></li>
+                    <li><a href="">Juice</a></li>
+                </div>
+                <div class="nav2">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href=""><img src="img/icon/add-to-cart.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/icon/user.png" alt=""></a></li>
+                </div>
+            </ul>
+          
+        </nav>
+        <main>
+
+           <div class="banner">
+            <div>
+               <img src="./img/banner/organic.PNG"  alt="banner"> 
+            </div>
+
+            <div class="content">
+                <h3>Best Quality Products</h3>
+                <h1>Join The Organic <br> Movement!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt ullam inventore saepe expedita! Praesentium nisi voluptatibus consectetur vitae mollitia iste necessitatibus deleniti temporibus voluptatum. Eligendi ea delectus distinctio? Hic, saepe!
+                </p>
+                <input type="button" value="SHOP NOW" id="btnshop">
+            </div>
+           </div>
+
+           
+           
+           
+        </main>
+    </body>
+</html>
