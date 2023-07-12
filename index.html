@@ -6,30 +6,70 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta name="description" content="this is a ecommerce website">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <style>
+        
+            .nav3{
+                display: none;
+            }
             .navigation{
                 display: flex;
                 list-style-type: none;
                 justify-content: space-between;
                 padding: 1%;
+                font-size: large;
             }
             .nav1{
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                width: 50%;
+                width: 40%;
             }
             .nav2{
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
                 width: 30%;
+            }
+            .nav3{
+                align-self: center;
+            }
+            .responsive{
+                display: flex;
+                flex-direction: column;
+                padding: 1%;
+                list-style-type: none;
+                border: 2px solid red;
+                width: 90vw;
+                margin: 2%;
+            }
+            .newnav1{
+                display: flex;
+                flex-direction: column;
+                padding: 1%;
+                align-items: center;
+            }
+            .newnav2{
+                display: flex;
+                flex-direction: column;
+                padding: 1%;
+                align-items: center;
             }
             #logo{
                 width: 80%;
             }
             .nav2>li>a>img{
                 width: 3vw;
+            }
+            .newnav2>li>a>img{
+                width: 3vw;
+            }
+            .newnav2>li{
+                padding: 2%;
+            }
+            .newnav1>li{
+                padding: 2%;
             }
             .banner>div{
                 width: 50%;
@@ -54,13 +94,13 @@
             }
             #btnshop{
                     background-color: #5fa500;
-                    width: 30%;
-                    height: 10%;
+                    width: 120px;
+                    height: 30px;
                     border-radius: 1em;
                     color: white;
                     font-weight: bold;
                     border:0;
-                   
+                    
                 }
 
             .advertise{
@@ -85,6 +125,7 @@
                  flex-direction: column-reverse;
                  text-align: center;
                  padding: 1%;
+                 line-height: 1.5;
                }
                .banner>div{
                 width: 90%;
@@ -93,6 +134,35 @@
                 width: 90%;
                 
                }
+               .banner>div>h1{
+                font-size: 10vw;
+              }
+               .nav2{
+                display: none;
+               }
+               .nav3{
+                display: inline;
+               }
+               .nav1>li{
+                display: none;
+               }
+               .newnav2>li>a>img{
+                width: 5vw;
+               }
+               .advertise{
+                flex-direction: column;
+               }
+               .icon{
+                margin-right: 10vw;
+                font-size: 5vw;
+                position: sticky;
+               }
+               
+               .nav1{
+                width: 100%;
+                padding: 1%;
+               }
+
            }
 
            @media (max-width:425px) {
@@ -101,32 +171,12 @@
              }
            }
 
-           @media (max-width:907px) {
-            .navigation{
-                flex-direction: column;
-                border:2px solid green;
-            }
+           @media screen and  (max-width:1100px) {
             .nav1{
-                width: 100%;
-                border-bottom: 2px solid green;
-                padding: 1%;
-            }
-            .nav2{
-                width: 100%;
-                padding: 1%;
-            }
-            .nav2>li>a>img{
-               width: 5vw;
-            }
-           }
-
-           
-           @media (max-width:500px){
-            .nav1{
-               flex-direction: column;
-            }
-
-
+                display: flex;
+                justify-content: space-;
+                width: 60%;
+            }   
            }
         
         </style>
@@ -135,20 +185,29 @@
     <body>
         <nav>
           
-            <ul class="navigation">
-                <div class="nav1">
-                    <li><a href=""><img src="./img/nav.PNG" alt="" id="logo"></a></li>
+            <ul class="navigation" id="n">
+                <div class="nav1" id="n1">
+                    <a href=""><img src="./img/nav.PNG" alt="" id="logo"></a>
                     <li><a href="">Everything</a></li>
                     <li><a href="">Groceries</a></li>
                     <li><a href="">Juice</a></li>
                 </div>
-                <div class="nav2">
+
+                <div class="nav2" id="n2">
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href=""><img src="img/icon/add-to-cart.jpg" alt=""></a></li>
                     <li><a href=""><img src="img/icon/user.png" alt=""></a></li>
+                    
+                </div>
+
+                <div class="nav3">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
                 </div>
             </ul>
+            
           
         </nav>
         <main>
@@ -188,6 +247,30 @@
             </div>
            </section>
            
+           <script>
+             function myFunction(){
+                var x = document.getElementById("n");
+                if (x.className === "navigation") {
+                    x.className = "responsive";
+                }else{
+                    x.className = "navigation";
+                }
+                
+                var x1 = document.getElementById("n1");
+                if (x1.className === "nav1") {
+                    x1.className = "newnav1";
+                }else{
+                    x1.className = "nav1";
+                }
+
+                var x2 = document.getElementById("n2");
+                if (x2.className === "nav2") {
+                    x2.className = "newnav2";
+                }else{
+                    x2.className = "nav2";
+                }
+             }
+           </script>
         </main>
     </body>
 </html>
