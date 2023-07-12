@@ -63,6 +63,23 @@
                    
                 }
 
+            .advertise{
+                display: flex;
+                justify-content: space-evenly;
+                background-color: black;
+                color: white;
+            }
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            .advertise>div{
+                margin: 2%;
+                border: 1px solid white;
+                padding: 2%;
+                background-color: #252525;
+            }
+
             @media screen and (min-width :0px) and (max-width: 768px) {
                .banner{
                  flex-direction: column-reverse;
@@ -150,11 +167,27 @@
             </div>
            </div>
 
-           <div>
-            <h1>Fiza Badkar</h1>
-           </div>
+           <section>
+            <div class="advertise">
+                <div>
+                    <h2>Free Shiping</h2>
+                    <p>Above Rs-100 Only</p>
+                </div>
+                <div>
+                    <h2>Certified Organic</h2>
+                    <p>100% guarantee</p>
+                </div>
+                <div>
+                    <h2>Huge Savings</h2>
+                    <p>At Lowest Price</p>
+                </div>
+                <div>
+                    <h2>Easy Returns</h2>
+                    <p>No Questions Asked</p>
+                </div>
+            </div>
+           </section>
            
-
         </main>
     </body>
 </html>
