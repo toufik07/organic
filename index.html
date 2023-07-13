@@ -19,6 +19,7 @@
                 justify-content: space-between;
                 padding: 1%;
                 font-size: large;
+                margin:1%;
             }
             .nav1{
                 display: flex;
@@ -34,6 +35,8 @@
             }
             .nav3{
                 align-self: center;
+                order: 1;
+                
             }
             .responsive{
                 display: flex;
@@ -49,18 +52,20 @@
                 flex-direction: column;
                 padding: 1%;
                 align-items: center;
+                order:2;
             }
             .newnav2{
                 display: flex;
                 flex-direction: column;
                 padding: 1%;
                 align-items: center;
+                order:3;
             }
             #logo{
                 width: 80%;
             }
             .nav2>li>a>img{
-                width: 3vw;
+                width: 2vw;
             }
             .newnav2>li>a>img{
                 width: 3vw;
@@ -79,15 +84,16 @@
                 width: 100%;
             }
             .banner{
-                margin: 2%;
-                padding: 2%;
+                margin: 1%;
+                padding: 1%;
                 display: flex;
                
             }
             .banner>.content{
-                padding: 2%;
+                padding: 6%;
                 padding-top: 10%;
                 width: 40%;
+                line-height: 1.4;
             }
             .banner>div>h1{
                 font-size: 3em;
@@ -113,13 +119,23 @@
                 margin:0px;
                 padding: 0px;
             }
+
             .advertise>div{
                 margin: 2%;
                 border: 1px solid white;
                 padding: 2%;
                 background-color: #252525;
             }
-
+            #leaf{
+                width: 50px;
+            }
+            .product>div>img{
+                width: 95%;
+            }
+            .product > div{
+              margin:2%;
+              padding: 2%;
+            }
             @media screen and (min-width :0px) and (max-width: 768px) {
                .banner{
                  flex-direction: column-reverse;
@@ -141,7 +157,12 @@
                 display: none;
                }
                .nav3{
-                display: inline;
+                display: flex;
+                padding-right: 10%;
+                
+               }
+               .icon>i{
+                position: sticky;
                }
                .nav1>li{
                 display: none;
@@ -153,15 +174,28 @@
                 flex-direction: column;
                }
                .icon{
-                margin-right: 10vw;
+                margin-right: 10%;
                 font-size: 5vw;
-                position: sticky;
-               }
                
+               }
                .nav1{
                 width: 100%;
                 padding: 1%;
                }
+               .navigation{
+                display: flex;
+                 width: 100vw;
+                height: 10vw;
+                margin-top:2%;
+               }
+               #logo{
+                margin: 3%;
+                padding: 2%;
+               }
+               .product{
+                flex-direction: column;
+               }
+               
 
            }
 
@@ -179,6 +213,25 @@
             }   
            }
         
+           .content{
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+            
+           }
+           .content>h1{
+            font-size: 2em;
+            margin-top: 5%;
+           }
+           .product>img{
+            width: 20vw;
+           }
+           .product{
+            display: flex;
+            margin: 2%;
+            padding: 2%;
+            justify-content: space-around;
+           }
         </style>
     </head>
 
@@ -193,23 +246,23 @@
                     <li><a href="">Juice</a></li>
                 </div>
 
+                <div class="nav3">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                </div>
+
                 <div class="nav2" id="n2">
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href=""><img src="img/icon/add-to-cart.jpg" alt=""></a></li>
                     <li><a href=""><img src="img/icon/user.png" alt=""></a></li>
                     
-                </div>
-
-                <div class="nav3">
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                      </a>
-                </div>
+                </div> 
             </ul>
-            
-          
+           
         </nav>
+
         <main>
 
            <div class="banner">
@@ -218,6 +271,7 @@
             </div>
 
             <div class="content">
+                <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/logo-leaf-new.png" alt="" id="leaf">
                 <h3>Best Quality Products</h3>
                 <h1>Join The Organic <br> Movement!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt ullam inventore saepe expedita! Praesentium nisi voluptatibus consectetur vitae mollitia iste necessitatibus deleniti temporibus voluptatum. Eligendi ea delectus distinctio? Hic, saepe!
@@ -226,6 +280,7 @@
             </div>
            </div>
 
+           <!-- advertise -->
            <section>
             <div class="advertise">
                 <div>
@@ -247,30 +302,63 @@
             </div>
            </section>
            
-           <script>
-             function myFunction(){
-                var x = document.getElementById("n");
-                if (x.className === "navigation") {
-                    x.className = "responsive";
-                }else{
-                    x.className = "navigation";
-                }
+           
+           <!-- best selling product -->
+           <section>
+            <div class="bproduct">
+                <div class="content">
+                    <h1>Best selling Product</h1>
+                    <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/logo-leaf-new.png" alt="" id="leaf">
+                </div>
                 
-                var x1 = document.getElementById("n1");
-                if (x1.className === "nav1") {
-                    x1.className = "newnav1";
-                }else{
-                    x1.className = "nav1";
-                }
-
-                var x2 = document.getElementById("n2");
-                if (x2.className === "nav2") {
-                    x2.className = "newnav2";
-                }else{
-                    x2.className = "nav2";
-                }
-             }
-           </script>
+                <div class="product">
+                    <div> <img src="img/best selling products/assorted coffee.PNG" alt=""></div>
+                    <div><img src="img/best selling products/hand sanitizer.PNG" alt=""></div>
+                    <div><img src="img/best selling products/Hand Picked red chilies.PNG" alt=""></div>
+                    <div><img src="img/best selling products/natural oil.PNG" alt=""></div>
+                   
+                    
+                   
+                    
+                </div>
+            </div>
+           </section>
         </main>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function myFunction(){
+               var x = document.getElementById("n");
+               if (x.className === "navigation") {
+                   x.className = "responsive";
+               }else{
+                   x.className = "navigation";
+               }
+               
+               var x1 = document.getElementById("n1");
+               if (x1.className === "nav1") {
+                   x1.className = "newnav1";
+               }else{
+                   x1.className = "nav1";
+               }
+
+               var x2 = document.getElementById("n2");
+               if (x2.className === "nav2") {
+                   x2.className = "newnav2";
+               }else{
+                   x2.className = "nav2";
+               }
+            }
+          </script>
     </body>
 </html>
