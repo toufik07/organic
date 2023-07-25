@@ -1,6 +1,7 @@
 *{
-    margin:0px;
-    padding: 0px;
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 
 .navigation{
@@ -9,9 +10,9 @@
     justify-content: space-between;
     padding: 1%;
     font-size: large;
-    margin:1%;
     background: rgb(121,128,222);
     background: linear-gradient(90deg, rgba(121,128,222,1) 12%, rgba(113,232,82,1) 70%, rgba(39,187,242,0.9136904761904762) 81%);
+    height: 10vh;
 }
 .navigation>div>li>a{
  color: white;
